@@ -130,13 +130,13 @@ In terminal:
 
 ## Future improvements
 1. Increase speed:
-
+    
     The main bottleneck is when compiling from csv, the usage of line.split(delimiter). I tried to use multiprocessing (commented within `compile_csv`), but somehow, it's even slower... If time permitted, I will explore more on that...
     
 2. Data cleansing:
-
-I didn't do too much except: replace all `\"` , convert lower cases to UPPER cases, mapping soc_code with potential soc_name, However, I found that when compiling csv files, there were some cases that had larger length than the headers. Since I am using line.split(delimiter), I guess there might be other  `;` within the files that is not served as delimiter....So maybe a better data cleansing should be done...
+    
+    I didn't do too much except: replace all `\"` , convert lower cases to UPPER cases, mapping soc_code with potential soc_name, However, I found that when compiling csv files, there were some cases that had larger length than the headers. Since I am using line.split(delimiter), I guess there might be other  `;` within the files that is not served as delimiter....So maybe a better data cleansing should be done...
 
 3. Parameter passing (headers):
-
-Can it be automatic, to find headers in given datafiles, and look for relevant columns by keywords....
+   
+   Can it be automatic, to find headers in given datafiles, and look for relevant columns by keywords?
