@@ -1,5 +1,6 @@
 # h1b_analysis
-## Purpose: analyze given h1b dataset, return Top 10 Occupations and Top 10 States for certified visa applications to two txt files.
+## Purpose: 
+Analyze given h1b dataset, return Top 10 Occupations and Top 10 States for certified visa applications to two txt files.
 ## Folder Structure: 
 The directory structure for your repo should look like this:
 ```
