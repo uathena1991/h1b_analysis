@@ -47,7 +47,7 @@ The directory structure look like this:
 |   |   └── top_10_occupations.txt
 |   |   └── top_10_states.txt
 ```
-## test datasets instruction
+## Test datasets
 ### Input dataset
 test_1 is the given test (10 cases); 
 
@@ -59,11 +59,12 @@ test_5 is generated from H1B_FY_2017.csv, converted from the .xlsx file provided
 ### Ground truth
 I compared the results with the results I've got in Matlab. 
 
-## `h1b_counting.py` functions and intro
+## `h1b_counting.py` functions and instruction
 ### Module dependency
+Everything is done by python 3.6 on a Mac machine.
 I only used the standard Python modules (BTW, God knows how much I miss pandas!!!)
 
-`os, argparse, ast, numpy, collections, pdb (for debug), cProfile (to test speed)`
+`os, argparse, ast, numpy 1.15.1, collections, pdb (for debug), cProfile (to test speed)`
 ### Inputs
 It uses argparse to specify all inputs. 
 
@@ -90,6 +91,9 @@ Things that normally unchanged:
 ├── --headers_occ: headers of occ used for output
 ├── --print_parser: if True, print all parameters
 ```
+An example of running `h1b_counting.py` in Terminal:
+
+`python3 ./src/h1b_counting.py --parent_path='/Volumes/Data/GitHub/h1b_analysis/' --filename='h1b_input.csv' --visa_key='CASE_STATUS' --state_key='WORKSITE_STATE' --soc_num_key='SOC_CODE' --soc_name_key='SOC_NAME'`
 ### Output
 It only returns True or False, all other outputs are printed on the screen (such as current process, error information, and output folder).
 
@@ -135,7 +139,7 @@ In terminal:
     
 2. Data cleansing:
     
-    I didn't do too much except: replace all `\"` , convert lower cases to UPPER cases, mapping soc_code with potential soc_name, However, I found that when compiling csv files, there were some cases that had larger length than the headers. Since I am using line.split(delimiter), I guess there might be other  `;` within the files that is not served as delimiter....So maybe a better data cleansing should be done...
+    I didn't do too much except: replace all " , convert lower cases to UPPER cases, mapping soc_code with potential soc_name, However, I found that when compiling csv files, there were some rows that had larger length than the headers. Since I am using line.split(delimiter), I guess there might be other  `;`s within the files that are not served as delimiter....So maybe a better data cleansing should be done...
 
 3. Parameter passing (headers):
    
