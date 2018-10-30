@@ -23,19 +23,19 @@ parser.add_argument('--filename', type=str, default='h1b_input.csv',
 
 
 parser.add_argument('--visa_key', type=str,
-					default='STATUS',
+					default='CASE_STATUS',
 					help='Application status (case sensitive)')
 
 
 parser.add_argument('--state_key', type = str,
-					default = 'LCA_CASE_WORKLOC1_STATE',
+					default = 'WORKSITE_STATE',
 					help='Column name for working state (case sensitive)')
 
 
-parser.add_argument('--soc_num_key', type=str, default='LCA_CASE_SOC_CODE',
+parser.add_argument('--soc_num_key', type=str, default='SOC_CODE',
 				help='Column name for soc code (case sensitive)')
 
-parser.add_argument('--soc_name_key', type=str, default='LCA_CASE_SOC_NAME',
+parser.add_argument('--soc_name_key', type=str, default='SOC_NAME',
 				help='Column name for soc name (case sensitive)')
 
 

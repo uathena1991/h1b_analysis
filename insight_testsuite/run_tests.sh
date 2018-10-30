@@ -99,7 +99,7 @@ function run_all_tests {
     setup_testing_input_output
 
     cd ${GRADER_ROOT}/temp
-    bash run.sh $test_folder 2>&1
+    bash run.sh 2>&1
     cd ../
 
     compare_outputs

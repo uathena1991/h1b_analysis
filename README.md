@@ -117,6 +117,10 @@ It only returns True or False, all other outputs are printed on the screen (such
 In terminal:
 1. cd to `h1b_analysis/insight_testsuite` 
 2. run `./run_tests.sh`. The command (includes all parameters) to run each input files are written in `run.sh`. 
+3. `run.sh `: You can specify the visa_status, workesite_state, soc_name keys in `h1b_counting.py`, however, in `run.sh`, now it's default to:
+
+`--visa_key='CASE_STATUS' --state_key='WORKSITE_STATE' --soc_num_key='SOC_CODE' --soc_name_key='SOC_NAME'`
+
 
 ## Future improvements:
 1. Increase speed:
